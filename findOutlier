@@ -1,0 +1,22 @@
+// This is my solution for the "Find the Parity Outlier" challenge on Codewars, in JS. (https://www.codewars.com/kata/5526fc09a1bbd946250002dc).
+// I created two arrays (even and odd) and put given integers according to their divisibility by 2.
+// Finally I find the outlier by checking array length and return the object as number.
+
+function findOutlier(integers){
+  odds = [];
+  evens = [];
+  for(let elem of integers) {
+    if (elem % 2 == 0) {
+      evens.push(elem);
+    }
+    else {
+      odds.push(elem);
+    }
+  }
+  if (odds.length < 2) {
+    return Number(odds);
+  }
+  else {
+    return Number(evens);
+  }
+}
